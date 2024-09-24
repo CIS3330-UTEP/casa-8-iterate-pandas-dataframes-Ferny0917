@@ -1,14 +1,17 @@
 import pandas as pd
 
+# Data frame
 df = pd.read_csv('big-mac-full-index.csv' )
 
-s = pd.read_csv('big-mac-full-index.csv', squeeze=True)
 
 print("Given Dataframe :\n", df)
 
 print("\nIterating over rows using iterrows() method :\n")
 
+
+# Just show the first 10 dont need to see the whole thing
 limit = 10 
+# naming index and row and using iterrows in the dataframe
 for index,row in df.iterrows():
     if index >= limit:
         break
@@ -21,18 +24,3 @@ for index,row in df.iterrows():
     #      'CNY_adjusted': [0.96883,0.01031,0.33548,0.30204]}
 
 
-def fun(curr):
-    if curr < 1:
-        return "Low"
-    elif curr >= 2 and curr <3:
-        return "Normal"
-    else:
-        return "High"
-    
-new = s.apply(fun)
-
-print(new.head(5))
-
-print(new[1], new[2],new[3])
-
-print(new.tail(3))
