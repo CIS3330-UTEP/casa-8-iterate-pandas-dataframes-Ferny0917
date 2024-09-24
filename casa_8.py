@@ -15,8 +15,14 @@ limit = 10
 for index,row in df.iterrows():
     if index >= limit:
         break
+    #print what position the index 
     print(f'row{index} data:')
+    # priting the rows for each columns 
     print(f"Name: {row['name']}, Currency Code: {row['currency_code']}")
+
+
+
+
 
 # data = {'Name': ['Argentina','Australia', 'Brazil', 'Canada'],
     #    'currency_code': ['ARS','AUD','BRL','CAD'],
